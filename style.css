@@ -36,7 +36,22 @@ ul {
   list-style: none;
 }
 
+.header a i {
+  /* ... otras reglas CSS ... */
+  position: absolute;
+  left: 8px; /* Ajusta la posición izquierda según sea necesario */
+  top: 50%; /* Ajusta la posición vertical al centro */
+  transform: translateY(-50%); /* Centra verticalmente el ícono */
+}
+
+.Titulo {
+  /* ... otras reglas CSS ... */
+  margin-left: 70px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+
 .navbar {
+  padding-left: 0;
   height: 100%;
   display: flex;
   justify-content: space-between;
