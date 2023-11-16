@@ -1,0 +1,519 @@
+body {
+  margin: 0;
+  padding: 0.5em;
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(199, 199, 199);
+}
+
+/* Encabezado */
+
+:root {
+  --color_primario: #3d3c44fd;
+  --color_primario_suave: #676b7c;
+  --color_blanco: #fff;
+  --altura_header: 80px;
+  --padding_left_right: 2rem;
+  --ancho_maximo: 1200px;
+}
+
+.header {
+  height: var(--altura_header);
+  background-color: var(--color_primario);
+}
+
+.Titulo {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0 var(--padding_left_right);
+}
+
+.menu_hamburguesa {
+  display: none;
+}
+
+.menu_hamburguesa:checked + .ul_links {
+  height: calc(100vh - var(--altura_header));
+}
+
+header a i {
+  color: black;
+  font-size: 4em;
+  margin-left: 0.5em;
+  text-shadow: 3px 2px 2px rgb(240, 240, 238);
+}
+
+.list_icon {
+  cursor: pointer;
+}
+
+.ul_links {
+  width: 100%;
+  margin-top: 0;
+  background-color: var(--color_primario_suave);
+  position: absolute;
+  top: var(--altura_header);
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  /* height: calc(100vh - var(--altura_header)); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  transition: all 0.3s;
+}
+
+.link {
+  font-size: 3rem;
+  color: var(--color_blanco);
+  font-weight: bold;
+}
+
+/* Responsive en Escritorio*/
+
+@media (min-width: 769px) {
+  .Titulo {
+    display: none;
+  }
+
+  .label_hamburguesa {
+    display: none;
+  }
+
+  .ul_links {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: #3d3c44fd;
+  }
+
+  .link {
+    font-size: 1.6rem;
+    transition: all 0.3s;
+    padding: 0.2rem 0.7rem;
+    border-radius: 20%;
+  }
+
+  .link:hover {
+    background-color: #070707;
+  }
+}
+
+/* Sección Principal */
+
+#Sección-Principal {
+  max-width: 100%;
+}
+.seccion-1 {
+  background-color: rgb(117, 110, 110);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acerca-de {
+  padding: 2.8em;
+  margin: 4em;
+  width: 30em;
+  height: 30em;
+  justify-content: center;
+  border: 0.1em solid black;
+  border-radius: 25% 10%;
+}
+
+.acerca-de h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.acerca-de p {
+  font-size: 2em;
+  align-items: center;
+  text-align: justify;
+}
+
+/* Foto Personal */
+
+.acerca-imagen {
+  margin-top: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.acerca-imagen img {
+  border-radius: 10px 100px / 120px;
+  height: 35em;
+}
+
+/* Sección Pricipal Móvil */
+
+@media (max-width: 768px) {
+  .seccion-1 {
+    background-color: rgb(252, 252, 252);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .acerca-de {
+    background-color: #070707;
+    padding: 1em;
+    margin: 0;
+    width: 45em;
+    height: 20em;
+    justify-content: center;
+    border: 0 solid black;
+    border-radius: 0% 0%;
+  }
+
+  .acerca-de h2 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .acerca-de p {
+    color: white;
+    font-size: 1.3em;
+    align-items: center;
+    text-align: center;
+  }
+
+  .acerca-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .acerca-imagen img {
+    border-radius: 10px 100px / 120px;
+    height: 20em;
+  }
+}
+
+/* Sección Secundaria */
+
+.seccion-2 {
+  margin: 3em;
+}
+.seccion-2 img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Sección Secundaria Móvil */
+
+@media (max-width: 768px) {
+  .seccion-2 {
+    margin: 0;
+  }
+
+  .seccion-2 img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Titulo de Contenidos */
+
+h1 {
+  padding-left: 3em;
+  font-size: 2.5em;
+}
+
+/* Sección Tarjetas */
+
+.container2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 2500px;
+  max-height: 3000px;
+}
+
+.container3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 2500px;
+  max-height: 3000px;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  width: 30%;
+  margin: 1em;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20p rgba(0, 0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+.card img {
+  width: 18em;
+  border-radius: 6px;
+}
+
+.card .contenido {
+  padding: 15px;
+  text-align: center;
+}
+
+.card .contenido p {
+  line-height: 1.5;
+  font-size: 1.2em;
+  color: #6a6a6a;
+}
+
+.card .contenido h3 {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.card .contenido a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em;
+  margin-top: 10px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: all 400ms ease;
+}
+
+.card .contenido a:hover {
+  background-color: rgb(207, 148, 38);
+  color: black;
+}
+
+/* Sección Tarjetas Móvil */
+
+@media (max-width: 768px) {
+  .container2,
+  .container3 {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna para dispositivos móviles */
+    align-items: stretch; /* Asegura que las tarjetas ocupen todo el ancho del contenedor */
+  }
+
+  .card {
+    width: 100%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+  }
+
+  .card:hover {
+    box-shadow: 5px 5px 20p rgba(0, 0, 0, 0, 0.4);
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+  padding-bottom: 0.5em;
+  background-color: rgb(56, 55, 55);
+  font-size: 20px;
+  color: black;
+}
+
+/* Formulario */
+/* ------------- Formulario ------------- */
+
+.formulario {
+  background-color: #f6f7f8;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+
+  width: 80%;
+  padding: 50px;
+  margin: 30px 0 40px 0;
+}
+
+.contacto {
+  padding: 0;
+}
+
+/* ------------- Campos del Formulario ------------- */
+
+.form-row {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+  background-color: #bdbdbd;
+  border: 0;
+  border-radius: 6px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form-row label {
+  margin-bottom: 3px;
+  text-align: initial;
+}
+
+.form-row textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+
+  background-color: #bdbdbd;
+  border: 0;
+  border-radius: 6px;
+
+  width: 100%;
+  height: 100px;
+}
+
+.form-row button {
+  font: 16px;
+
+  color: black;
+  background-color: rgb(158, 146, 122);
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: rgb(207, 148, 38);
+}
+
+.form-row button:active {
+  background-color: rgb(102, 100, 93);
+}
+
+#alertas {
+  font-size: 0.7em;
+  text-align: center;
+  margin-right: 10px;
+  color: rgb(184, 18, 18);
+}
+
+/* Formulario Responsive */
+
+@media only screen and (min-width: 768px) {
+  .formulario {
+    width: 65%;
+    align-items: start;
+  }
+
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .form-row input[type="text"],
+  .form-row input[type="email"] {
+    width: 600px;
+    height: initial;
+  }
+  .form-row label {
+    text-align: right;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
+  .form-row textarea {
+    width: 600px;
+    height: 200px;
+  }
+
+  .form-row button {
+    margin-left: 120px;
+  }
+}
+
+/* Redes */
+
+footer ul {
+  padding: 0.5em;
+  margin: 0;
+}
+
+footer h2 {
+  font-size: 2em;
+  margin: 0;
+}
+footer ul li a {
+  color: white;
+}
+
+footer a i {
+  color: rgb(167, 114, 17);
+  position: fixed;
+  text-shadow: 3px 2px 2px rgb(10, 10, 10);
+  bottom: 22px;
+  right: 39px;
+  font-size: 4em;
+}
+
+.redes {
+  background-color: #070707;
+  width: 98%;
+  padding: 3.3em;
+}
+
+.sigueme {
+  color: rgb(167, 114, 17);
+}
+
+/* Redes Responsive Móvil */
+
+@media (max-width: 768px) {
+  .redes {
+    width: 95%;
+  }
+}
