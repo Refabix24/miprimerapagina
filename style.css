@@ -236,6 +236,10 @@ header a i {
   }
 }
 
+.container {
+  padding: 0 5px; /* O ajusta según sea necesario */
+}
+
 /* Sección Secundaria */
 
 .seccion-2 {
@@ -267,7 +271,7 @@ header a i {
   .seccion-2 img {
     width: 155%;
     max-width: none;
-    height: 450px;
+    height: 350px;
   }
 }
 
@@ -368,13 +372,15 @@ figure {
 @media (max-width: 768px) {
   .container2,
   .container3 {
+    margin: 0;
+    width: 100%;
     flex-direction: column; /* Cambia la dirección del flexbox a columna para dispositivos móviles */
     align-items: center; /* Asegura que las tarjetas ocupen todo el ancho del contenedor */
     justify-content: center;
   }
 
   .card {
-    width: 95%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
+    width: 90%; /* Asegura que cada tarjeta ocupe el 100% del ancho del contenedor */
   }
 
   .card:hover {
