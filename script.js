@@ -150,3 +150,27 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkScroll);
   checkScroll(); // Verifica el estado inicial al cargar la página
 });
+
+
+
+
+// Botón enviar
+
+const nombreInput = document.getElementById('nombre');
+const emailInput = document.getElementById('email');
+const mensajeInput = document.getElementById('mensaje');
+const enviarButton = document.getElementById('enviarButton');
+
+function cambiarColorBoton() {
+  // Verifica si al menos un campo tiene contenido
+  if (nombreInput.value.trim() !== '' || emailInput.value.trim() !== '' || mensajeInput.value.trim() !== '') {
+    enviarButton.style.backgroundColor = 'rgb(207, 148, 38)'; // Cambia el color del botón
+  } else {
+    enviarButton.style.backgroundColor = ''; // Restaura el color original del botón
+  }
+}
+
+// Agrega un evento 'input' a cada campo para escuchar cambios
+nombreInput.addEventListener('input', cambiarColorBoton);
+emailInput.addEventListener('input', cambiarColorBoton);
+mensajeInput.addEventListener('input', cambiarColorBoton);

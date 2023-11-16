@@ -477,7 +477,7 @@ footer {
   font: 16px;
 
   color: black;
-  background-color: rgb(158, 146, 122);
+  background-color: rgb(207, 148, 38);
 
   border: none;
   border-radius: 3px;
@@ -486,13 +486,7 @@ footer {
   cursor: pointer;
 }
 
-.form-row button:hover {
-  background-color: rgb(207, 148, 38);
-}
 
-.form-row button:active {
-  background-color: rgb(102, 100, 93);
-}
 
 #alertas {
   font-size: 0.7em;
@@ -532,7 +526,17 @@ footer {
 
   .form-row button {
     margin-left: 120px;
+    color: black;
+    background-color: rgb(158, 146, 122);
   }
+
+  .form-row button:hover {
+    background-color: rgb(207, 148, 38);
+  }
+  .form-row button:active {
+    background-color: rgb(207, 148, 38);
+  }
+
 }
 
 /* Redes */
