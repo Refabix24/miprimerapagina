@@ -1,6 +1,8 @@
-body {
+html, body {
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: "Oswald", sans-serif;
   background-color: rgb(199, 199, 199);
 }
@@ -9,7 +11,7 @@ body {
 
 :root {
   --color_primario: #3d3c44fd;
-  --color_primario_suave: #676b7c;
+  --color_primario_suave: #676b7cf1;
   --color_blanco: #fff;
   --altura_header: 80px;
   --padding_left_right: 2rem;
@@ -64,6 +66,7 @@ header a i {
 }
 
 .ul_links {
+  padding: 0;
   width: 100%;
   margin-top: 0;
   background-color: var(--color_primario_suave);
@@ -123,6 +126,7 @@ header a i {
 
 #Sección-Principal {
   max-width: 100%;
+  margin: 0;
 }
 
 .greeting {
@@ -206,6 +210,7 @@ header a i {
     color: white;
     font-size: 2em;
     text-align: center;
+    margin: 0.2em;
   }
 
   .acerca-de p {
@@ -260,8 +265,9 @@ header a i {
   }
 
   .seccion-2 img {
-    width: 100%;
+    width: 155%;
     max-width: none;
+    height: 450px;
   }
 }
 
@@ -406,6 +412,7 @@ footer {
 
 .contacto {
   padding: 0;
+  margin: 0.2em;
 }
 
 /* ------------- Campos del Formulario ------------- */
