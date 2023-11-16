@@ -130,4 +130,23 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+// Transición Imagen Sección 2
 
+// Agrega una clase cuando la sección entra en la vista al hacer scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const seccion2 = document.querySelector(".seccion-2");
+
+  function checkScroll() {
+    const windowHeight = window.innerHeight;
+    const seccionTop = seccion2.getBoundingClientRect().top;
+
+    if (seccionTop < windowHeight * 0.75) {
+      seccion2.classList.add("in-view");
+    } else {
+      seccion2.classList.remove("in-view");
+    }
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll(); // Verifica el estado inicial al cargar la página
+});
