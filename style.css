@@ -306,14 +306,22 @@ h1 {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
-  margin: 0 auto; /* Centra el contenedor */
+  flex-direction: wrap;
+  max-width: 2500px;
+  max-height: 3000px;
 }
 
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .card {
   width: 30%;
   margin: 1em;
+  align-items: center;
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
@@ -321,7 +329,6 @@ h1 {
   cursor: default;
   transition: all 400ms ease;
   flex: 1;
-  max-width: 300px; /* Ajusta el ancho máximo de las tarjetas */
 }
 
 .card:hover {
@@ -330,24 +337,19 @@ h1 {
 }
 
 .card img {
-  width: 100%;
-  max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+  width: 18em;
   border-radius: 6px;
 }
 
 .card .contenido {
   padding: 15px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .card .contenido p {
   line-height: 1.5;
   font-size: 1.2em;
   color: #6a6a6a;
-  flex-grow: 1;
 }
 
 .card .contenido h3 {
@@ -359,14 +361,12 @@ h1 {
 .card .contenido a {
   text-decoration: none;
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   margin-top: 10px;
   color: black;
   border: 1px solid black;
   border-radius: 4px;
   transition: all 400ms ease;
-  max-width: 200px;
-  margin: 0 auto;
 }
 
 .card .contenido a:hover {
